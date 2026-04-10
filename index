@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Roulette</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- START SCREEN -->
+<div id="startScreen">
+  <h1>Pokémon Roulette</h1>
+  <button onclick="showModes()">Start Game</button>
+</div>
+
+<!-- MODE SELECT -->
+<div id="modeSelect" class="hidden">
+  <h2>Select Mode</h2>
+  <button onclick="startGame('easy')">Easy</button>
+  <button onclick="startGame('medium')">Medium</button>
+  <button onclick="startGame('hard')">Hard</button>
+</div>
+
+<!-- GAME -->
+<div id="game" class="hidden">
+  <h2 id="modeText"></h2>
+
+  <div id="wheel">🎡</div>
+  <button onclick="spinWheel()">Spin</button>
+
+  <p id="result"></p>
+
+  <h3>Your Team</h3>
+  <ul id="team"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
